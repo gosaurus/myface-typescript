@@ -21,6 +21,8 @@ router.get("/", async (request, response) => {
   return response.render("post_list", {
     postList: postList,
     format: format,
+    // next: postList.next,
+    // previous: postList.previous
   });
 });
 
