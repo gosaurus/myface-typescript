@@ -20,9 +20,7 @@ router.get("/", async (request, response) => {
   const postList = await getPageOfPosts(page, pageSize);
   return response.render("post_list", {
     postList: postList,
-    format: format,
-    // next: postList.next,
-    // previous: postList.previous
+    format: format
   });
 });
 
