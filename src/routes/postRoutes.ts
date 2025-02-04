@@ -32,7 +32,6 @@ router.post(
   "/create/",
   body("message").notEmpty(),
   body("imageUrl").notEmpty(),
-  body("Subtitle").notEmpty(),
   async (request, response) => {
     const errors = validationResult(request);
     if (!errors.isEmpty()) {
