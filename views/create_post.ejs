@@ -4,13 +4,13 @@
 <body>
 <h1>Create Post</h1>
     <form method="post" action="/posts/create">
-        <label for="PostMessage"> 
+        <label for="message"> 
             Message:
-            <input type="text" name="PostMessage" required/>
+            <input type="text" id="message" name="message" required/>
         </label>
         <label for="imageUrl">
             Image URL:
-            <input type="text" name="imageUrl" required/>
+            <input type="text" id="imageUrl" name="imageUrl" required/>
         </label>
         <button type="submit">Submit</button>
     </form>
