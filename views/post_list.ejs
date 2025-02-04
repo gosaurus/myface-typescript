@@ -7,10 +7,9 @@
     <% postList.results.forEach(function(post) {%>
         <li>
         <p>Post id: <%= post.id %> - <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></p>
-        <p>Posted by: <%= JSON.stringify(post.postedBy.name) %> Liked by: 
-            <%= post.likedBy.map((user) => (
-                user.name
-            )) %> Disliked by: <%= post.dislikedBy.map((user) => (user.name)) %></p>
+        <p>Posted by: <%= JSON.stringify(post.postedBy.name) %> </p>
+        <p>Liked by: <%= post.likedBy.map((user) => (user.name))%></p>
+        <p>Disliked by: <%= post.dislikedBy.map((user) => (user.name)) %></p>
         <p><img src="<%= post.imageUrl %>" height="25%"/></p>
         </li>
     <% }); %>
