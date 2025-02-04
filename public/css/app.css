@@ -1,17 +1,48 @@
 /* Add your styles here. */
+
+
 body {
     font-family: Arial, sans-serif;
+    font-size: 5vw;
+    
 }
 
 
-div.container {
-    border: 1px solid green;
+
+.container {
+    border: 0px solid green;
+    width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+    .container {
+        width: 100%
+    }
 }
 
 div.posts {
-    border: 1px solid red;
+    border: 0px solid red;
+    padding: 5px;
+    
 }
 
 div.post {
     border: 1px solid blue;
+    
+
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  
+img {
+    aspect-ratio: auto;
+}
+
+.reactions {
+    font-weight: bold;
 }
