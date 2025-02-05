@@ -8,9 +8,6 @@ body {
 .container {
     border: 2px solid green;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
     margin-left: auto;
     margin-right: auto;
 }
@@ -50,12 +47,21 @@ body {
 div.posts {
     border: 0px solid red;
     padding: 5px;
-    
+    display: flex;
+    overflow-x: scroll;
 }
 
-div.post {
-    border: 1px solid blue;
+ul {
+    display:flex;
+    flex-wrap: wrap;
+}
 
+li.post {
+    list-style-type: none;
+    border: 1px solid blue;
+    padding: 5px;
+    max-width: 300px;
+    margin: 10px;
 
 }
 
@@ -67,7 +73,7 @@ img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 50%;
   }
 
 .reactions {
@@ -76,7 +82,47 @@ img.center {
 
 nav {
     border: 1px solid red;
-    
     margin: 1em;
     width: 100%;
+}
+
+#profileimage {
+    border-radius: 50%;
+    border: 2px solid;
+    z-index: 0;    
+    max-width: 25%;
+    height: auto;
+    margin: 0px 10px 0px 10px;
+}
+#profilebanner {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#username {
+    border: 1px solid grey;
+}
+
+.profileusername{
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.profileemail {
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+h1.profilename {
+    font-size: 5vw;
+
+}
+
+#coverimage {
+    z-index: -1;
+    max-width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+    object-position: 0% 100%;
 }

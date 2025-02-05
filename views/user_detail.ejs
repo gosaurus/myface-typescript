@@ -2,7 +2,39 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<h1><%= name %></h1>
+<div id="coverImage">
+    <img id="coverimage" src="<%= coverImageUrl %>"/>
+    <div id="profilebanner">
+        
+        <img id="profileimage" src="<%= profileImageUrl %>" />
+
+        <div id="username">
+                <h1 class="profilename"><%= name %></h1>
+                <span class="profileusername"><%= username %></span></b><br>
+                <span class="profileemail"><%= email %></span>
+        </div>
+    </div>
+</div>
+
+<div>
+<h2>Posts by <%= name %></h2>
+<ul>
+<%= posts.forEach(function(post) {%>
+    <li>id</li>
+
+<% }); %>
+
+</ul>
+</div>
+
+
+<%= likes %>
+<%= dislikes %>
+
+</div>
+
 </body>
 <%- include('_footer') -%>
 </html>
+
+
