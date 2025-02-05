@@ -28,7 +28,11 @@ body {
 @media only screen and (min-width: 1024px) {
     .container {
         width: 90%;
-        font-size: 2vw;
+        font-size: 1vw;
+    }
+
+    #profileimage {
+        height: 100px;
     }
 }
 
@@ -67,6 +71,7 @@ li.post {
 
 img {
     aspect-ratio: auto;
+
 }
 
 img.center {
@@ -86,6 +91,13 @@ nav {
     width: 100%;
 }
 
+#profilebanner {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
 #profileimage {
     border-radius: 50%;
     border: 2px solid;
@@ -93,15 +105,15 @@ nav {
     max-width: 25%;
     height: auto;
     margin: 0px 10px 0px 10px;
-}
-#profilebanner {
-    border: 1px solid red;
-    display: flex;
-    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 #username {
     border: 1px solid grey;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .profileusername{
@@ -115,9 +127,10 @@ nav {
 }
 
 h1.profilename {
-    font-size: 5vw;
+    font-size: 1vw;
 
 }
+
 
 #coverimage {
     z-index: -1;

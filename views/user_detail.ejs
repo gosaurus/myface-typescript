@@ -10,27 +10,50 @@
 
         <div id="username">
                 <h1 class="profilename"><%= name %></h1>
-                <span class="profileusername"><%= username %></span></b><br>
-                <span class="profileemail"><%= email %></span>
+                <h3 class="profileusername"><%= username %></span></b><br>
+                <h3 class="profileemail"><%= email %></span>
         </div>
     </div>
 </div>
 
 <div>
-<h2>Posts by <%= name %></h2>
-<ul>
-<%= posts.forEach(function(post) {%>
-    <li>id</li>
-
-<% }); %>
-
-</ul>
+    <h2>Posts by <%= name %></h2>
+    <ul>
+    <% posts.forEach(function(post) {%>
+        <li class="post">
+            <img src="<%= post.imageUrl %>" class="center" />
+            <h4 class="postauthor"><%= name %></h4>
+            <h4 class="postdate"><%= post.createdAt %></h4>
+            <p class="message"><%= post.message %></p>
+        </li>
+    <% }); %>
+    </ul>
 </div>
-
-
-<%= likes %>
-<%= dislikes %>
-
+<div>
+    <h2>Posts <%= name %> liked</h2>
+    <ul>
+    <% likes.forEach(function(post) {%>
+        <li class="post">
+        <img src="<%= post.imageUrl %>" class="center" />
+        <h4 class="postauthor"><%= post.name %></h4><br>
+        <h4 class="postdate"><%= post.createdAt %></h4>
+        <p class="message"><%= post.message %></p>
+        </li>
+    <% }); %>
+    </ul>
+</div>
+<div>
+    <h2>Posts <%= name %> disliked</h2>
+    <ul>
+    <% dislikes.forEach(function(post) {%>
+        <li class="post">
+            <img src="<%= post.imageUrl %>" class="center" />
+            <h4 class="postauthor"><%= post.name %></h4><br>
+            <h4 class="postdate"><%= post.createdAt %></h4>
+            <p class="message"><%= post.message %></p>
+        </li>
+    <% }); %>
+    </ul>
 </div>
 
 </body>
