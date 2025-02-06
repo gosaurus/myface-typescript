@@ -1,13 +1,12 @@
 /* Add your styles here. */
 body {
     font-family: Arial, sans-serif;
-    /*font-size: 5vw; https://matthewjamestaylor.com/responsive-font-size*/
-    font-size: calc(15px + 0.390625)
+    font-size: calc(15px + 0.390625) 
     
 }
 
 .container {
-    border: 2px solid green;
+    border: 0px solid green;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -18,30 +17,45 @@ body {
         width: 100%
     }
     
-    #profileimage {
-        max-width: 25%;
+   #profileimage {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    div.content {
+        top: 5%;
     }
 }
 /* Ipads, tablets - small */
 @media only screen and (min-width: 768px) {
     .container {
         width: 90%;
-        /*font-size: 2.5vw;*/
+    
     }
     
     #profileimage {
-        max-width: 25%;
+        max-width: 120px;
+        max-height: 120px;
+    }
+    
+    div.content {
+        top: 70px;
     }
 }
 /*Ipads, tablets - medium or landscape */
 @media only screen and (min-width: 1024px) {
     .container {
         width: 90%;
-        /* font-size: 1vw; */
+
     }
 
     #profileimage {
-        max-width: 170px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    div.content {
+        top: 185px;
     }
 }
 
@@ -49,17 +63,24 @@ body {
 @media only screen and (min-width: 1920px) {
     .container {
         width: 50%;
-        /* font-size: 1vw; */
     }
 
     #profileimage {
         max-width: 170px;
+        max-height: 170px;
     }
-    /* nav {
-        
-        font-size: 1vw;
-    } */
+
+    div.content {
+        top: 0px;
+    }
 }
+ 
+div.content{
+    position: relative;
+    padding: 0px 0px 0px 10px;
+    border: 0px solid rgb(255, 0, 157);
+}
+
 div.posts {
     border: 0px solid red;
     overflow-x: scroll;
@@ -75,13 +96,12 @@ ul {
 
 li.post {
     list-style-type: none;
-    border: 1px solid blue;
-    padding: 5px;
-    width: 40%;
+    border: 0px solid blue;
+    padding: 20px 10px 10px 10px;
+    max-width: 280px;
     height: 70%;
     margin: 10px;
-    /* flex: 1 1 0; flex-grow, flex-shrink flex-basis */
-
+    background-color:rgba(202, 201, 201, 0.145);
 }
 
 img {
@@ -101,51 +121,48 @@ img.center {
 }
 
 nav {
-    border: 1px solid red;
+    border: 0px solid red;
     margin: 1em;
     width: 100%;
 }
 
 #profilebanner {
-    border: 1px solid red;
+    border: 0px solid red;
     display: flex;
-    z-index: 0;    
     flex-wrap: wrap;
     flex-direction: row;
 }
 
 #profileimage {
-    border-radius: 50% / 50%;
+    border-radius: 50% /50%;
     border: 2px solid;
-    height: auto;
     margin: 0px 10px 0px 10px;
-    flex:0 1;
+    flex: 0 1;
 }
 
 #username {
-    border: 1px solid grey;
+    border: 0px solid grey;
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
 }
 
 .profileusername{
-    /* font-size: 3vw; */
+
     font-size: 1rem;
     font-weight: 600;
 }
 
 .profileemail {
-    /* font-size: 3vw; */
+
     font-weight: 300;
     font-size: 0.9rem;
 }
 
 h1.profilename {
-    /* font-size: 1vw; */
+ 
     font-size: 1.5rem;
 }
-
 
 #coverimage {
     z-index: -1;
@@ -153,4 +170,5 @@ h1.profilename {
     max-height: 50%;
     object-fit: cover;
     object-position: 0% 100%;
+    padding-bottom: 20px;
 }
