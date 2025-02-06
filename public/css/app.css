@@ -1,7 +1,8 @@
 /* Add your styles here. */
 body {
     font-family: Arial, sans-serif;
-    font-size: 5vw;
+    /*font-size: 5vw; https://matthewjamestaylor.com/responsive-font-size*/
+    font-size: calc(15px + 0.390625)
     
 }
 
@@ -16,23 +17,31 @@ body {
     .container {
         width: 100%
     }
+    
+    #profileimage {
+        max-width: 25%;
+    }
 }
 /* Ipads, tablets - small */
 @media only screen and (min-width: 768px) {
     .container {
         width: 90%;
-        font-size: 2.5vw;
+        /*font-size: 2.5vw;*/
+    }
+    
+    #profileimage {
+        max-width: 25%;
     }
 }
 /*Ipads, tablets - medium or landscape */
 @media only screen and (min-width: 1024px) {
     .container {
         width: 90%;
-        font-size: 1vw;
+        /* font-size: 1vw; */
     }
 
     #profileimage {
-        height: 100px;
+        max-width: 170px;
     }
 }
 
@@ -40,9 +49,12 @@ body {
 @media only screen and (min-width: 1920px) {
     .container {
         width: 50%;
-        font-size: 1vw;
+        /* font-size: 1vw; */
     }
 
+    #profileimage {
+        max-width: 170px;
+    }
     /* nav {
         
         font-size: 1vw;
@@ -50,22 +62,25 @@ body {
 }
 div.posts {
     border: 0px solid red;
-    padding: 5px;
-    display: flex;
     overflow-x: scroll;
 }
 
 ul {
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
 }
 
 li.post {
     list-style-type: none;
     border: 1px solid blue;
     padding: 5px;
-    max-width: 300px;
+    width: 40%;
+    height: 70%;
     margin: 10px;
+    /* flex: 1 1 0; flex-grow, flex-shrink flex-basis */
 
 }
 
@@ -94,19 +109,17 @@ nav {
 #profilebanner {
     border: 1px solid red;
     display: flex;
+    z-index: 0;    
     flex-wrap: wrap;
     flex-direction: row;
 }
 
 #profileimage {
-    border-radius: 50%;
+    border-radius: 50% / 50%;
     border: 2px solid;
-    z-index: 0;    
-    max-width: 25%;
     height: auto;
     margin: 0px 10px 0px 10px;
-    flex-grow: 0;
-    flex-shrink: 0;
+    flex:0 1;
 }
 
 #username {
@@ -117,18 +130,20 @@ nav {
 }
 
 .profileusername{
-    font-size: 3vw;
+    /* font-size: 3vw; */
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .profileemail {
-    font-size: 3vw;
+    /* font-size: 3vw; */
     font-weight: 300;
+    font-size: 0.9rem;
 }
 
 h1.profilename {
-    font-size: 1vw;
-
+    /* font-size: 1vw; */
+    font-size: 1.5rem;
 }
 
 

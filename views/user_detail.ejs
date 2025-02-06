@@ -16,8 +16,8 @@
     </div>
 </div>
 
+<h2>Posts by <%= name %></h2>
 <div>
-    <h2>Posts by <%= name %></h2>
     <ul>
     <% posts.forEach(function(post) {%>
         <li class="post">
@@ -29,13 +29,12 @@
     <% }); %>
     </ul>
 </div>
+<h2>Posts <%= name %> liked</h2>
 <div>
-    <h2>Posts <%= name %> liked</h2>
     <ul>
     <% likes.forEach(function(post) {%>
         <li class="post">
         <img src="<%= post.imageUrl %>" class="center" />
-        <h4 class="postauthor"><%= post.name %></h4><br>
         <h4 class="postdate"><%= post.createdAt %></h4>
         <p class="message"><%= post.message %></p>
         </li>
@@ -48,7 +47,6 @@
     <% dislikes.forEach(function(post) {%>
         <li class="post">
             <img src="<%= post.imageUrl %>" class="center" />
-            <h4 class="postauthor"><%= post.name %></h4><br>
             <h4 class="postdate"><%= post.createdAt %></h4>
             <p class="message"><%= post.message %></p>
         </li>
