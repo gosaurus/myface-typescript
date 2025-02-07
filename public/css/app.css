@@ -6,7 +6,6 @@ body {
 }
 
 .container {
-    border: 0px solid green;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -22,9 +21,6 @@ body {
         max-height: 80px;
     }
 
-    div.content {
-        top: 5%;
-    }
 }
 /* Ipads, tablets - small */
 @media only screen and (min-width: 768px) {
@@ -37,10 +33,7 @@ body {
         max-width: 120px;
         max-height: 120px;
     }
-    
-    div.content {
-        top: 70px;
-    }
+   
 }
 /*Ipads, tablets - medium or landscape */
 @media only screen and (min-width: 1024px) {
@@ -54,9 +47,6 @@ body {
         max-height: 150px;
     }
 
-    div.content {
-        top: 185px;
-    }
 }
 
 /* desktop screen */
@@ -70,9 +60,7 @@ body {
         max-height: 170px;
     }
 
-    div.content {
-        top: 0px;
-    }
+
 }
  
 div.content{
@@ -82,7 +70,6 @@ div.content{
 }
 
 div.posts {
-    border: 0px solid red;
     overflow-x: scroll;
 }
 
@@ -96,7 +83,6 @@ ul {
 
 li.post {
     list-style-type: none;
-    border: 0px solid blue;
     padding: 20px 10px 10px 10px;
     max-width: 280px;
     height: 70%;
@@ -121,13 +107,11 @@ img.center {
 }
 
 nav {
-    border: 0px solid red;
     margin: 1em;
     width: 100%;
 }
 
 #profilebanner {
-    border: 0px solid red;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -141,7 +125,6 @@ nav {
 }
 
 #username {
-    border: 0px solid grey;
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
@@ -167,7 +150,6 @@ h1.profilename {
 #coverimage {
     z-index: -1;
     max-width: 100%;
-    max-height: 50%;
     object-fit: cover;
     object-position: 0% 100%;
     padding-bottom: 20px;
