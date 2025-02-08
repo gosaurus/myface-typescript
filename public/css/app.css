@@ -17,7 +17,8 @@ body {
     }
 
     .posts {
-        max-width: 100%
+        max-width: 100%;
+        font-size: 1.2rem;
     }
 
 }
@@ -90,7 +91,8 @@ div.info {
     flex-wrap: wrap;
     direction: row;
     margin-top: 10px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 div.author {
@@ -114,7 +116,7 @@ img.center {
 
 div.reactions {
     float: right;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 span.reactions {
     font-weight: bold;
@@ -124,6 +126,26 @@ span.reactions {
 nav {
     margin: 1em;
     width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+}
+
+#menu {
+    margin: 10px 20px 10px 0px;
+    padding: 10px;
+}
+
+nav a, nav a:link, nav a:active, nav a:visited {
+    margin: 10px 20px;
+    padding: 10px;
+    color: #444;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 #profilebanner {
@@ -135,7 +157,7 @@ nav {
 #profileimage {
     border-radius: 50% /50%;
     border: 2px solid;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px;
     flex: 0 1;
 }
 
@@ -145,8 +167,7 @@ nav {
     flex-shrink: 1;
 }
 
-.profileusername{
-
+.profileusername {
     font-size: 1rem;
     font-weight: 600;
 }
