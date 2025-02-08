@@ -19,16 +19,14 @@
 
 <div class="content">
     <h2>Posts by <%= name %></h2>
-    <ul>
     <% posts.forEach(function(post) {%>
-        <li class="post">
+        <div class="post">
             <img src="<%= post.imageUrl %>" class="center" />
             <h4 class="postauthor"><%= name %></h4>
             <h4 class="postdate"><%= post.createdAt %></h4>
             <p class="message"><%= post.message %></p>
-        </li>
+        </div>
     <% }); %>
-    </ul>
 </div>
 <div class="content">
 <h2>Posts <%= name %> liked</h2>
