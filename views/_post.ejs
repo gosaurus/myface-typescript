@@ -1,0 +1,17 @@
+
+                <div class="post">
+                    <h2 class="post_id">Post id: <%= post.id %></h2>
+                    <div><img src="<%= post.imageUrl %>" class="center"/></div>
+                    <div class="info">
+                        <div class="author">By <%= (post.postedBy.name) %></div>
+                        <div class="timestamp"><%= post.createdAt.toDateString() %></div>
+                    </div>
+                        <p><%= post.message %></p>
+                    <div class = "reactions">
+                        <p>
+                            <span class="reactions">Liked by:</span> <%= post.likedBy.length %> | 
+                            <span class="reactions">Disiked by:</span> <%= post.dislikedBy.length %>
+                        </p>
+                    </div>
+
+                </div>
