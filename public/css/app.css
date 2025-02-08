@@ -1,58 +1,57 @@
 /* Add your styles here. */
 body {
     font-family: Arial, sans-serif;
-    font-size: calc(15px + 0.390625) 
     
 }
 
 .container {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
+/* smartphones */
 @media only screen and (min-width: 320px) {
-    .container {
-        width: 100%
-    }
-    
    #profileimage {
         max-width: 80px;
         max-height: 80px;
     }
 
+    .posts {
+        max-width: 100%
+    }
+
 }
 /* Ipads, tablets - small */
 @media only screen and (min-width: 768px) {
-    .container {
-        width: 90%;
-    
-    }
-    
     #profileimage {
         max-width: 120px;
         max-height: 120px;
+    }
+    .post {
+        max-width: 44%;
     }
    
 }
 /*Ipads, tablets - medium or landscape */
 @media only screen and (min-width: 1024px) {
-    .container {
-        width: 90%;
-
-    }
-
     #profileimage {
         max-width: 150px;
         max-height: 150px;
     }
 
+    .posts {
+        max-width: 100%;
+
+    }
+    .post {
+        max-width: 30%;
+    }
 }
 
 /* desktop screen */
 @media only screen and (min-width: 1920px) {
     .container {
-        width: 50%;
+        width: 70%;
     }
 
     #profileimage {
@@ -60,36 +59,49 @@ body {
         max-height: 170px;
     }
 
-
+    .post {
+        max-width: 29%;
+    }
 }
  
 div.content{
-    position: relative;
-    padding: 0px 0px 0px 10px;
-    border: 0px solid rgb(255, 0, 157);
+    width: 95%;
 }
 
 div.posts {
-    overflow-x: scroll;
-}
-
-ul {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     overflow-x: scroll;
+    margin: auto;
 }
 
-li.post {
+
+div.post {
     list-style-type: none;
     padding: 20px 10px 10px 10px;
-    max-width: 280px;
     height: 70%;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
     background-color:rgba(202, 201, 201, 0.145);
 }
 
+div.info {
+    display: flex;
+    flex-wrap: wrap;
+    direction: row;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+div.author {
+    flex: 1;
+    text-align: left;
+}
+
+div.timestamp {
+    flex: 1;
+    text-align: right;
+}
 img {
     aspect-ratio: auto;
 
@@ -97,14 +109,17 @@ img {
 
 img.center {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    max-width: 100%
   }
 
-.reactions {
+div.reactions {
+    float: right;
+    font-size: 0.8rem;
+}
+span.reactions {
     font-weight: bold;
 }
+
 
 nav {
     margin: 1em;
@@ -145,6 +160,11 @@ nav {
 h1.profilename {
  
     font-size: 1.5rem;
+}
+
+h2.post_id {
+    font-size: 0.9rem;
+    color: #444;
 }
 
 #coverimage {

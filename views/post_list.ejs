@@ -4,32 +4,23 @@
 <%- include('_header') -%>
 <body>    
     <h1>Posts</h1>
-<p><button type="button" id="changeColors">Change color</button></p>
-    <div class="posts">
-    <ul>
-        <% postList.results.forEach(function(post) {%>
-            <li class="post">
-            <h3>Post id: <%= post.id %></h3><h2><%= post.message %></h2><h4 class="timestamp">
-                <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></h4>
-            <p>Posted by: <%= JSON.stringify(post.postedBy.name) %> </p>
-            <p><img src="<%= post.imageUrl %>" class="center"/></p>
-            <p><span class="reactions">Liked by:</span><%= post.likedBy.map((user) => (user.name))%></p>
-            <p><span class="reactions">Disiked by:</span><%= post.dislikedBy.map((user) => (user.name)) %></p>
-            </li>
-        <% }); %>
-        
-        </ul>
-    </div>
+    <p><button type="button" id="changeColors">Change color</button></p>
+        <div class="posts">
+            <% postList.results.forEach(function(post) {%>
+                <%- include ('_post', {post:post}); -%>
+            <% }); %>
+        </div>
+    <div class="more_pages"
+    <% if (postList.next) { %>
     <h3>More posts</h3>
         <p>
-            <%if (postList.next) { %>
-                <a href="<%= postList.next %>">Next</a>
-            <% } %>
-            <%if (postList.previous) { %>
-                <a href="<%= postList.previous %>">Previous</a>
-            <% } %>
+            <a href="<%= postList.next %>">Next</a>
+    <% } %>
+    <%if (postList.previous) { %>
+            <a href="<%= postList.previous %>">Previous</a>
+    <% } %>
         </p>
-    
+    </div> 
 </body>
 <%- include('_footer') -%>
 </html>
